@@ -72,4 +72,19 @@ class LRA2_HELPER():
         data['phi'] = self.phi
         data['u'] = self.u
 
-        data.to_csv('model_data.csv', index=False, header=True)
+        data.to_csv('model_data_v2.csv', index=False, header=True)
+        
+    def saveRandomData(self):
+        """Save the control and the state data:
+            - csv file: model_data.csv
+            - format: x, u
+        """
+        import pandas as pd
+        # Set up empty DataFrame
+        data = pd.DataFrame()
+
+        data['d'] = self.d
+        data['phi'] = self.phi
+        data['u'] = self.u
+
+        data.to_csv('random_model_data_v2.csv', index=False, header=True)
